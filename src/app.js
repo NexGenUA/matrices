@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 
+const matrixRouter = require('./resources/matrix/matrix.router');
+
 const app = express();
 
 app.use(helmet());
@@ -16,5 +18,7 @@ app.use('/', (req, res, next) => {
   }
   next();
 });
+
+app.use('/matrix', matrixRouter);
 
 module.exports = app;

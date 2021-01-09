@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+<div class="container mt-5">
+  <form action="/matrix/result" method="post" enctype="multipart/form-data">
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="matrixA">Matrix A</label>
+      <input type="file" class="form-control" id="matrixA" name="files">
+    </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="matrixB">Matrix B</label>
+      <input type="file" class="form-control" id="matrixB" name="files">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Get result matrix">
+  </form>
+  <p class="lead mt-3"><strong>OR</strong></p>
+  <a href="/matrix/random?rowsA=3&colsA=5&rowsB=5&colsB=5">
+    <button class="btn btn-secondary">Generate random matrices and get result</button>
+  </a>
+</div>
+</body>
+</html>
